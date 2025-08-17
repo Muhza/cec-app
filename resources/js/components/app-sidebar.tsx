@@ -18,6 +18,11 @@ const mainNavItems: NavItem[] = [
         href: '/goods',
         icon: Package,
     },
+    {
+        title: 'Services',
+        href: '/services',
+        icon: Package,
+    },
 ];
 
 const footerNavItems: NavItem[] = [

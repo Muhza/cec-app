@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  php-fpm:
+    container_name: cec-app-php
+    restart: always
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - /var/www/cec-app:/var/www/html
+    expose:
+      - 9000
+    networks:
+      - cec-app-net
+
+  nginx:
+    container_name: cec-app-prod-nginx
+    restart: always
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    volumes:
+      - /var/www/cec-app:/var/www/html
+    ports:
+      - 8083:80
+    depends_on:
+      - php-fpm
+    networks:
+      - cec-app-net
+
+networks:
+ cec-app-net:
+   driver: bridge

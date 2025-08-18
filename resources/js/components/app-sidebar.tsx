@@ -19,8 +19,18 @@ const mainNavItems: NavItem[] = [
         icon: Package,
     },
     {
+        title: 'services',
+        href: '/services',
+        icon: Package,
+    },
+    {
         title: 'Accounts',
         href: '/accounts',
+        icon: Folder,
+    },
+    {
+        title: 'Transactions',
+        href: '/transactions/create',
         icon: Folder,
     },
 ];

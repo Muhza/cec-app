@@ -19,11 +19,7 @@ const mainNavItems: NavItem[] = [
         icon: Package,
     },
     {
-<<<<<<< HEAD
         title: 'Services',
-=======
-        title: 'services',
->>>>>>> ad131ac74dccd9f5ad671d3ebf9b83fa1137f6d1
         href: '/services',
         icon: Package,
     },
@@ -33,17 +29,10 @@ const mainNavItems: NavItem[] = [
         icon: Folder,
     },
     {
-<<<<<<< HEAD
-        title: 'Calculation Summary',
-        href: '/accounts',
-        icon: Folder,
-    }
-=======
         title: 'Transactions',
         href: '/transactions/create',
         icon: Folder,
     },
->>>>>>> ad131ac74dccd9f5ad671d3ebf9b83fa1137f6d1
 ];
 
 const footerNavItems: NavItem[] = [

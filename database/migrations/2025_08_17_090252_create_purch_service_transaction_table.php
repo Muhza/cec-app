@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('trans_id');
             $table->integer('account_id')->unsigned();
             $table->integer('purch_service_id')->unsigned();
-            $table->decimal('qty', 8,2);
+            $table->decimal('qty', 8,6);
             $table->string('qtyUnit');
-            $table->decimal('emission', 8,2);
+            $table->decimal('emission', 8,6);
             $table->timestamps();
         });
     }

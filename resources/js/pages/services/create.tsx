@@ -36,7 +36,7 @@ export default function Create() {
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="fe">FE</Label>
-                                <Input id="fe" name="fe" type="number" step="0.01" />
+                                <Input id="fe" name="fe" type="number" step="0.000001" />
                                 <InputError message={errors.fe} />
                             </div>
                             <Button disabled={processing}>Save</Button>

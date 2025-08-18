@@ -16,7 +16,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('goods', GoodsController::class)->except(['show', 'create', 'edit']);
 });
 
-require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';
-require __DIR__.'/services.php';
-require __DIR__.'/accounts.php';
+require __DIR__ . '/settings.php';
+require __DIR__ . '/auth.php';
+require __DIR__ . '/services.php';
+require __DIR__ . '/accounts.php';
+require __DIR__ . '/transactions.php';

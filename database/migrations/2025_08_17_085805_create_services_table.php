@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('unit');
             $table->string('reference_item');
-            $table->decimal('fe', 8,2);
+            $table->decimal('fe', 8,6);
             $table->timestamps();
         });
     }

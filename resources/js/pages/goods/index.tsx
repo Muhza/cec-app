@@ -44,7 +44,7 @@ export default function GoodsIndex({ goods }: GoodsPageProps) {
                             </div>
                             <div className="grid gap-2">
                                 <Label htmlFor="fe">FE</Label>
-                                <Input id="fe" name="fe" type="number" step="0.01" placeholder="FE" />
+                                <Input id="fe" name="fe" type="number" step="0.000001" placeholder="FE" />
                                 <InputError className="mt-2" message={errors.fe} />
                             </div>
                             <Button disabled={processing}>Create</Button>
@@ -93,7 +93,7 @@ export default function GoodsIndex({ goods }: GoodsPageProps) {
                                             name="fe"
                                             defaultValue={good.fe}
                                             type="number"
-                                            step="0.01"
+                                            step="0.000001"
                                             placeholder="FE"
                                         />
                                     </div>

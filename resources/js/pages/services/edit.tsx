@@ -52,7 +52,7 @@ export default function Edit({ service }: { service: Service }) {
                                     id="fe"
                                     name="fe"
                                     type="number"
-                                    step="0.01"
+                                    step="0.000001"
                                     defaultValue={service.fe}
                                 />
                                 <InputError message={errors.fe} />

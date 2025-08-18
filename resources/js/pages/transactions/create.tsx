@@ -38,7 +38,7 @@ export default function Create({ services, goods, accounts }: { services: Servic
         if (isNaN(feValue) || feValue <= 0) {
             return 0;
         }
-        const result = (amount * feValue).toFixed(8);
+        const result = (amount * feValue).toFixed(6);
         document.getElementById(target)!.innerText = result.toString();
     }
     return (
@@ -76,13 +76,13 @@ export default function Create({ services, goods, accounts }: { services: Servic
                                                 {accounts.map((account) => (
                                                     <>
                                                         <td key={account.id} className="p-2">
-                                                            <Input name={`goods[${good.id}][${account.id}][amount]`} type="number" step="0.01" onChange={(e) =>
-    calculationEmision(
-      parseFloat(e.target.value || "0"),
-      good.fe || "0",
-      `goods_${good.id}_${account.id}`
-    )
-  } />
+                                                            <Input name={`goods[${good.id}][${account.id}][amount]`} type="number" step="0.000001" onChange={(e) =>
+                                                                calculationEmision(
+                                                                parseFloat(e.target.value || "0"),
+                                                                good.fe || "0",
+                                                                `goods_${good.id}_${account.id}`
+                                                                )
+                                                            } />
                                                         </td>
                                                         <td className='p-2'>{good.unit}</td>
                                                         <td className='p-2' id={`goods_${good.id}_${account.id}`}>0</td>
@@ -122,13 +122,13 @@ export default function Create({ services, goods, accounts }: { services: Servic
                                                 {accounts.map((account) => (
                                                     <>
                                                         <td key={account.id} className="p-2">
-                                                            <Input name={`services[${service.id}][${account.id}][amount]`} type="number" step="0.01" onChange={(e) =>
-    calculationEmision(
-      parseFloat(e.target.value || "0"),
-      service.fe || "0",
-      `services_${service.id}_${account.id}`
-    )
-  } />
+                                                            <Input name={`services[${service.id}][${account.id}][amount]`} type="number" step="0.000001" onChange={(e) =>
+                                                                calculationEmision(
+                                                                parseFloat(e.target.value || "0"),
+                                                                service.fe || "0",
+                                                                `services_${service.id}_${account.id}`
+                                                                )
+                                                            } />
                                                         </td>
                                                         <td className='p-2'>{service.unit}</td>
                                                         <td className='p-2' id={`services_${service.id}_${account.id}`}>0</td>
